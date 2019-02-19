@@ -1,0 +1,71 @@
+[
+    {
+        "id": "tools",
+        "caption": "Tools",
+        "children":
+        [
+            {
+                "id": "html_groomer",
+                "caption": "HtmlGroomer",
+                "children":
+                [
+                    {
+                        "caption": "HTML",
+                        "command": "html_groomer",
+                        "args": {"groomer_type": "html"},
+                    },
+                    {
+                        "caption": "HTML Email",
+                        "command": "html_groomer",
+                        "args": {"groomer_type": "html_email"},
+                    },
+                ],
+            }
+        ]
+    },
+    {
+        "caption": "Preferences",
+        "mnemonic": "n",
+        "id": "preferences",
+        "children":
+        [
+            {
+                "caption": "Package Settings",
+                "mnemonic": "P",
+                "id": "package-settings",
+                "children":
+                [
+                    {
+                        "caption": "HtmlGroomer",
+                        "children":
+                        [
+                            {
+                                "command": "open_file",
+                                "args": {
+                                    "file": "${packages}/HtmlGroomer/README.md"
+                                },
+                                "caption": "README"
+                            },
+                            {
+                                "command": "edit_settings",
+                                "args": {
+                                    "base_file": "${packages}/HtmlGroomer/HtmlGroomer.sublime-settings",
+                                    "default": "{\n\t$0\n}\n"
+                                },
+                                "caption": "Settings"
+                            },
+                            {
+                                "command": "edit_settings",
+                                "args": {
+                                    "base_file": "${packages}/HtmlGroomer/meta/Default.sublime-keymap",
+                                    "default": "[\n\t$0\n]\n"
+                                },
+                                "caption": "Key Bindings"
+                            },
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

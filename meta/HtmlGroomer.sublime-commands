@@ -1,0 +1,12 @@
+[
+    {
+        "caption": "HtmlGroomer (HTML)",
+        "command": "html_groomer",
+    	"args": {"groomer_type": "html"},
+    },
+    {
+        "caption": "HtmlGroomer (HTML Email)",
+        "command": "html_groomer",
+    	"args": {"groomer_type": "html_email"},
+    },
+]

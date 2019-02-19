@@ -1,0 +1,19 @@
+[
+    {
+        "id": "html_groomer",
+        "caption": "HtmlGroomer",
+        "children":
+        [
+            {
+                "caption": "HTML",
+                "command": "html_groomer",
+                "args": {"groomer_type": "html"},
+            },
+            {
+                "caption": "HTML Email",
+                "command": "html_groomer",
+                "args": {"groomer_type": "html_email"},
+            },
+        ],
+    }
+]

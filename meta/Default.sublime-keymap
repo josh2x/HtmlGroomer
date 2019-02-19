@@ -1,0 +1,12 @@
+[
+    {
+    	"keys": ["ctrl+shift+h"],
+    	"command": "html_groomer" ,
+    	"args": {"groomer_type": "html_email"},
+    },
+    {
+    	"keys": ["ctrl+alt+h"],
+    	"command": "html_groomer" ,
+    	"args": {"groomer_type": "html"},
+    },
+]
