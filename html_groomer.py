@@ -3,11 +3,10 @@
 HTMLGroomer
 
 Groom html to standarize it and make it pretty
+
 Usage:
     groomer = HtmlGroomer(settings, html)
     groomed = groomer.getGroomed()
-
-$Id: html_groomer.py 245 2019-02-08 17:42:48Z jmcfarren $
 
 TODO:
     * &#8209; type entity bug
@@ -23,7 +22,10 @@ import re
 import logging
 from html.parser import HTMLParser
 from collections import OrderedDict
-from urllib.parse import urlparse
+try:
+    from urllib.parse import urlparse
+except ImportError:
+     from urlparse import urlparse
 
 logging.basicConfig(level=logging.WARNING, format='%(name)s: %(funcName)s: %(message)s') #%(module)s: %(levelname)s:
 
@@ -89,7 +91,7 @@ class HtmlGroomer():
 class HGParser(HTMLParser):
 
     """
-    Feed HTML content and get back an HGStack object containing Element objects
+    Feed HTML content and get back an HGStack object containing HGElement objects
     Usage:
         parser = HGParser(settings, html)
         stack = parser.stack
@@ -575,7 +577,7 @@ class HGElement():
             # html height and width attributes should not have px
             if attributes.get('height', '').endswith('px'):
                  attributes['height'] = attributes['height'][:-2]
-            if attributes.get('width') and attributes['width'].endswith('px'):
+            if attributes.get('width', '').endswith('px'):
                 attributes['width'] = attributes['width'][:-2]
             # html emails
             if 'html_email' == self.settings.get('groomer_type'):
