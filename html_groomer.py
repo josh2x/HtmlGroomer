@@ -651,9 +651,7 @@ class HGElement():
         return styles + ';'
 
     def fixUrl(self, u):
-        #TODO fix missing protocol
-        #url = urlparse(u.strip())
-        url = u.strip()
+        url = urlparse(u.strip())
         return url.geturl()
 
     def debug(self, metadata={}):
