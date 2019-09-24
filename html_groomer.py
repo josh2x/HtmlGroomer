@@ -20,8 +20,11 @@ TODO:
 import string
 import re
 import logging
-from html.parser import HTMLParser
 from collections import OrderedDict
+try:
+    from html.parser import HTMLParser
+except ImportError:
+    from HTMLParser import HTMLParser
 try:
     from urllib.parse import urlparse
 except ImportError:
